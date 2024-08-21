@@ -17,4 +17,21 @@ public class RequirosoC {
 //            pr.addProduct(1011,"Soap",20,30,20.00);
 //            pr.viewProduct();
     
+        Grades gr = new Grades();
+        
+        
+        System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s %-10s %-10s\n",
+                "Student ID", "Name", "Prelim", "Midterm", "Prefinal", "Final", "Average", "Remarks");
+        
+   
+        gr.addGrades(1001, "Mike", 1.0, 1.0, 1.0, 1.0);
+        gr.viewGrades();
+        
+    
+        Grades gr1 = new Grades();
+        gr1.addGrades(1002, "John", 2.0, 1.0, 1.0, 1.0);
+        gr1.viewGrades();
+
+}
+    
 }
