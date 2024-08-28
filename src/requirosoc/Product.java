@@ -17,7 +17,7 @@ public class Product {
 
   
     public void viewProduct() {
-        double profit = this.sold * this.price;  // Assuming profit is calculated this way
+        double profit = this.sold * this.price;  
         String status = (this.stock < 1) ? "Out-of-Stock" : "Available";
         double totalValue = this.stock * this.price;
         
