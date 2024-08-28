@@ -35,8 +35,8 @@ public class RequirosoC {
 //      Students students = new Students();
 //        students.genGrade();
 
-Employees employees = new Employees();
-        employees.Salaries();
+  Employees emp = new Employees();
+        emp.Salaries();
 }
     
 }

@@ -4,59 +4,64 @@ package requirosoc;
 import java.util.Scanner;
 public class Employees {
     
+    class Employee {
+        int id;
+        String name;
+        double rate;
+        double hoursWorked;
+        double grossPay;
+        double deduction;
+        double netPay;
+        
+        Employee(int id, String name, double rate, double hoursWorked, double deduction) {
+            this.id = id;
+            this.name = name;
+            this.rate = rate;
+            this.hoursWorked = hoursWorked;
+            this.grossPay = rate * hoursWorked;
+            this.deduction = deduction;
+            this.netPay = grossPay - deduction;
+        }
+    }
+    
     public void Salaries(){
         Scanner input = new Scanner(System.in);
-       
-         
-        double totalSalary = 0;
-        double totalDeductions = 0;
-        double totalSalaryToRelease = 0;
-        
-        System.out.println("Enter the no. of Employees: ");
-        int emp  = input.nextInt();
-        
-       
+
+        System.out.println("Enter the number of Employees: ");
+        int emp = input.nextInt();
+
+        Employee[] employees = new Employee[emp];
 
         for (int i = 0; i < emp; i++){
-            
-            System.out.println("Details of Employee"+ (i + 1) + ":");
-            
-            System.out.println("ID: ");
-             int id = input.nextInt();  
-             
-             System.out.println("Name: ");
-             String name = input.next();  
-             
-             System.out.println("Rate: ");
-            double rate = input.nextDouble();
-            
-            System.out.println("Hours Worked: ");
-             double hrs = input.nextDouble();
-             
-             System.out.println("Gross: ");
-             double grs = input.nextDouble();
-             System.out.println("Total Deduction: 2");
-              double deduc = input.nextDouble();
-              
-              System.out.println("Net Pay: ");
-              double netp = input.nextDouble();
-             np[i] = new NetPay(id, name, rate, hrs, deduc);
+            System.out.println("Details of Employee " + (i + 1) + ":");
 
-            
-            totalSalary += np[i].getGrossPay();
-            totalDeductions += np[i].getDeductions();
-            totalSalaryToRelease += np[i].getNetPay();
+            System.out.print("ID: ");
+            int id = input.nextInt();  
+
+            System.out.print("Name: ");
+            String name = input.next();  
+
+            System.out.print("Rate: ");
+            double rate = input.nextDouble();
+
+            System.out.print("Hours Worked: ");
+            double hrs = input.nextDouble();
+
+            System.out.print("Total Deduction: ");
+            double deduc = input.nextDouble();
+
+            employees[i] = new Employee(id, name, rate, hrs, deduc);
         }
-       
-          System.out.printf("%-10s %-15s %-10s %-10s %-10s %-10s %-10s%n",
-                "ID", "NAME", "RATE", "HOURS", "GROSS", "DEDUCTIONS", "NETPAY");
-        System.out.println("-------------------------------------------------------------");
-         for (int i = 0; i < emp; i++) {
-            np[i].viewDetails();
-        }
-        System.out.printf("TOTAL SALARY: %.2f%n", totalSalary);
-        System.out.printf("TOTAL DEDUCTIONS: %.2f%n", totalDeductions);
-        System.out.printf("TOTAL SALARY TO RELEASE: %.2f%n", totalSalaryToRelease);
+
         
+        System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s %-10s\n", 
+                "ID", "Name", "Rate", "Hours", "Gross", "Deduction", "Net Pay");
+
+        
+        for (Employee e : employees) {
+            System.out.printf("%-10d %-10s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f\n", 
+                    e.id, e.name, e.rate, e.hoursWorked, e.grossPay, e.deduction, e.netPay);
+        }
     }
-}
+
+  }
