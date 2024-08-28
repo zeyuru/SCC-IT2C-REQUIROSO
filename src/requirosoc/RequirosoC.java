@@ -32,8 +32,11 @@ public class RequirosoC {
 //        gr1.addGrades(1002, "John", 2.0, 1.0, 1.0, 1.0);
 //        gr1.viewGrades();
 
-      Students students = new Students();
-        students.genGrade();
+//      Students students = new Students();
+//        students.genGrade();
+
+Employees employees = new Employees();
+        employees.Salaries();
 }
     
 }
