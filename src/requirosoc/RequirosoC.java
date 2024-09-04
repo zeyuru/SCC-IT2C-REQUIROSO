@@ -33,13 +33,15 @@ public class RequirosoC {
 //      Students students = new Students();
 //        students.genGrade();
 
-//  Employees emp = new Employees();
-//        emp.Salaries();
 
 
-Products products = new Products();
-         Product product = products.inputProductDetails();
-         product.viewProduct();
+
+//Products products = new Products();
+//         Product product = products.inputProductDetails();
+//         product.viewProduct();
+
+EmployeeManager manager = new EmployeeManager();
+        manager.Salaries();
 }
     
 }
