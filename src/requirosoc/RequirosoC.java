@@ -13,9 +13,7 @@ public class RequirosoC {
 //        np.getPay();
 //       
 //    }
-//            Product pr = new Product();
-//            pr.addProduct(1011,"Soap",20,30,20.00);
-//            pr.viewProduct();
+
     
 //        Grades gr = new Grades();
 //        
@@ -35,8 +33,19 @@ public class RequirosoC {
 //      Students students = new Students();
 //        students.genGrade();
 
-  Employees emp = new Employees();
-        emp.Salaries();
+
+
+
+//Products products = new Products();
+//         Product product = products.inputProductDetails();
+//         product.viewProduct();
+
+//EmployeeManager manager = new EmployeeManager();
+//        manager.Salaries();
+
+ Accounts accounts = new Accounts();
+        accounts.createAccounts();
+        accounts.displayAccounts();
 }
     
 }
