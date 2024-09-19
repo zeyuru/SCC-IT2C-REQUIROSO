@@ -15,12 +15,12 @@ public class Grades {
         this.midterm = midterm;
         this.prefinal = prefinal;
         this.finalExam = finalExam;
-        this.average = (prelim + midterm + prefinal + finalExam) / 4;
-        this.remarks = (average < 1.5) ? "Passed" : "Failed"; 
+        this.remarks = (average > 3) ? "Failed" : "Passed"; 
     }
 
    
     public void viewGrades() {
+         double average = (prelim + midterm + prefinal + finalExam) / 4;
         System.out.printf("%-10d %-10s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f %-10s\n",
                 studentID, name, prelim, midterm, prefinal, finalExam, average, remarks);
     }

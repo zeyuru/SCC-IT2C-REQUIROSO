@@ -30,8 +30,8 @@ public class RequirosoC {
 //        gr1.addGrades(1002, "John", 2.0, 1.0, 1.0, 1.0);
 //        gr1.viewGrades();
 
-//      Students students = new Students();
-//        students.genGrade();
+      Students students = new Students();
+        students.genGrade();
 
 
 
@@ -43,9 +43,9 @@ public class RequirosoC {
 //EmployeeManager manager = new EmployeeManager();
 //        manager.Salaries();
 
- Accounts accounts = new Accounts();
-        accounts.createAccounts();
-        accounts.displayAccounts();
+// Accounts accounts = new Accounts();
+//        accounts.createAccounts();
+//        accounts.displayAccounts();
 }
     
 }
